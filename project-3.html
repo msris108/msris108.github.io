@@ -26,10 +26,8 @@
 	</div>
 
 	<div class="content-wrapper-pro">
-		<center><h1>PAPER: Unsupervised CBIR System using deeplearning and Apache Spark</h1></center>
-		<div class="two-column-wrapper">
-			<div class="profile-image-wrapper">
-				<h2>1.1 Introduction</h2>
+		<center><h1>PAPER: Unsupervised CBIR System using deeplearning and Apache Spark</h1></center><hr>
+				<h2>1.1 Introduction</h2><hr>
 				<p>
 					Image retrieval searches and retrieves similar images from a database based on a query image. Text Based Image Retrival (TBIR) and Content Based Image Retrieval (CBIR) are the two ways in which similar images can be retrieved. 
 				</p>
@@ -40,9 +38,51 @@
 					Currently, the amount of digital images grows exponentially due to the increase of online users in the Internet. Considering this, distributed CBIR system has been developed using Hadoop & Map Reduce. The recent research of CBIR is shifted to the use of deep neural networks to extract the features. These works have shown good results on many datasets and outperformed handcrafted features subject to the condition of fine tuning of the deep neural network. 
 					CBIR has two parts namely, feature extraction and finding similar images using a suitable distance measure. In the context of feature extraction, if the dataset is labeled, a supervised deep learning neural network can be better used to extract the features. However, if the dataset is large in size and unlabeled, annotation of these images will be time consuming in order to extract the features. In the context of finding similar images, the traditional CBIR system compares the feature vector of the query image with the corresponding feature vector of each and every image in the database. This increases the query response time if the dataset is large in size. Hence, it is necessary to improve the CBIR system with respect to query response time for large dataset. Thus, the objective of this paper is to propose Scalable CBIR system to handle large dataset with improved query response time. 
 				</p>
+				
+				<center>
+				<img src="images/spark.png" height="300" width="400">
+				<img src="images/hadoop1.jpg" height="170" width="300">
+				</center>
+				<hr>
+				<h2>  2.1 Proposed Model</h2>
+				<hr>
+				<h4>2.1.1.Building of Denoising Auto-Encoder</h4>
+					The proposed Scalable CBIR (S-CBIR) system consists of three processes namely, feature extraction, bucketi-
+					zation of features and finding similar images as shown Figure 2. First, S-CBIR builds the denoising autoencoder
+
+					model using Apache Spark with the a set of training images from the database. Further, this model has been
+					utilized to learn the feature vectors for the training set. These feature vectors will be huge, if the data is more.
+					Hence, Locality Sensitive Hash (LSH) algorithm has been used to group the feature vectors of nearly similar
+					images into a set of buckets. When query image is given to S-CBIR, its feature vector will be found. Further,
+					the mapping bucket corresponds to the feature vector will be retrieved. Subsequently, K Nearest Neighbor
+					(KNN) algorithm has been applied for the feature vectors in the retrieved bucket to find the ‘k’ similar images.
+					However, when there are more nodes in the hidden layer than there are inputs, the network has the risk
+					of learning. Denoising Autoencoders solve this problem by corrupting the data on purpose by randomly turning
+					some of the input values to zero. Denoising refers to intentionally adding noise to the raw input before providing
+					it to the network. It creates a corrupted copy of the input by introducing some noise. This helps to avoid the
+					autoencoders to copy the input to the output without learning features about the data. Now the autoencoder
+					has to remove the corruption to generate an output that is similar to the input. Output is compared with input
+					and not with noised input. To minimize the loss function the process has to continue until the convergence.
+					Hence, CBIR utilizes the Denoising auto encoder to extract the features
+					<center>
+				<img src="images/Denoise-AE.png" width="800">
+				</center>
+				<hr>
+					<p>
+					<h4>2.1.1.2Feature Extraction</h4>
+					The S-CBIR system chooses to utilize deep learning architecture to extract the features from the image as it outperforms the hand crafted feature extraction methods. Though Convolutional Neural Network (CNN) can
+					13 be used to extract the features from the image, it requires labeled data to train the neural network. However,S-CBIR utilizes big data. As labeling task is costly and time consuming for big data, unsupervised deep learning algorithm, namely, the auto encoder is utilized in this implementation to extract features. Basically, autoencoder encodes the input value x using a function f. Further, it decodes the encoded value f(x) using a function g to create output value identical to the input value. In this context, the objective of the autoencoder
+					is to minimize the reconstruction error between the input and the output. This helps autoencoders to learn
+					important features present in the data. Auto encoder preserves most of the information present in the input when a representation allows a good reconstruction of its input.However, when there are more nodes in the hidden layer than there are inputs, the network has the risk of learning. Denoising Autoencoders solve this problem by corrupting the data on purpose by randomly turning some of the input values to zero. Denoising refers to intentionally adding noise to the raw input before providing it to the network. It creates a corrupted copy of the input by introducing some noise. This helps to avoid the autoencoders to copy the input to the output without learning features about the data. Now the autoencoder has to remove the corruption to generate an output that is similar to the input. Output is compared with input and not with noised input. To minimize the loss function the process has to continue until the convergence. Hence, CBIR utilizes the Denoising auto encoder to extract the features.
+
+				</p>
+				<center><img src="images/Autoencoder-working.png" height="300">
+				<img src="images/ae.png" height="270" width="400"> </center>
+				
+			
+				<hr>
 
 				<h4>2.1.2.Locality Sensitive Hashing: Using Random projection method</h4>
-					<img src="images/LSH-flow-chart.png" height="400" width="400" align="right"> 
 					Random projection is a technique for representing high-dimensional data in low-dimensional feature space (dimensionality reduction). It gained traction for its ability to approximately preserve relations (pairwise distance or cosine similarity) in low-dimensional space while being computationally less expensive.
 					The core idea behind random projection is that if points in a vector space are of sufficiently high dimension, then they may be projected into a suitable lower-dimensional space in a way which approximately preserves the distances between the points.
 					Consider a high-dimensional data represented as a matrix D, with n observations (columns of matrix) and d features (rows of the matrix). It can be projected onto a lower dimensional space with k dimensions using a random projection matrix R. Mathematically, the lower dimensional representation P can be obtained as:<br>
@@ -55,30 +95,8 @@
 				    5. Group observations with same hash values together to create a LSH table<br><br><br><br>
 
 				    <center>fig.3 img_retireval</center>
-					<center><img src="images/sample_retrieval.png"></center>
-			</div>
-			
-			<div class="profile-content-wrapper">
-				<img src="images/spark.png" height="300" width="400">
-				<img src="images/hadoop1.jpg" height="170" width="300">
-				<h2>  2.1 Proposed Model</h2>
-				<img src="images/ae.png" height="270" width="400" align="right"> 
-			
-				<h4>2.1.1.Building of Denoising Auto-Encoder</h4>
-					However, when there are more nodes in the hidden layer than there are inputs, the network has the risk
-					of learning. Denoising Autoencoders solve this problem by corrupting the data on purpose by randomly turning
-					some of the input values to zero. Denoising refers to intentionally adding noise to the raw input before providing
-					it to the network. It creates a corrupted copy of the input by introducing some noise. This helps to avoid the
-					autoencoders to copy the input to the output without learning features about the data. Now the autoencoder
-					has to remove the corruption to generate an output that is similar to the input. Output is compared with input
-					and not with noised input. To minimize the loss function the process has to continue until the convergence.
-					Hence, CBIR utilizes the Denoising auto encoder to extract the features
-
-				<center>fig.1 architecture</center>
-				<img src="images/Denoise-AE.png" width="800">
-				<center>fig.2 working</center>
-				<center><img src="images/Autoencoder-working.png" height="300"></center> 
-				
+					<center><img src="images/LSH-flow-chart.png"> </center>
+				<hr>
 				<h4>2.1.3 K-Nearest Neighbours</h4>
 				KNN is a model that classifies data points based on the points that are most similar to it. It uses test data to make an “educated guess” on what an unclassified point should be classified as.KNN is an algorithm that is considered both non-parametric and an example of lazy learning. 
 				Non-parametric means that it makes no assumptions. The model is made up entirely from the data given to it rather than assuming its structure is normal.
@@ -91,9 +109,11 @@
 				4.Accuracy depends on the quality of the data.<br>
 				5.Must find an optimal k value (number of nearest neighbors).<br>
 				6.Poor at classifying data points in a boundary where they can be classified one way or another.<br>
-			</div>
-		</div>
+
+				<img src="images/sample_retrieval.png">
+		<hr>
 		<h1>Proof of concept: </h1>
+		<hr>
 		<div class="scrolling-effect">
 			<ul>
 				  <li> <img src="images/FINAL/comparisons_chart.png" width="600" height="400"> </li>
