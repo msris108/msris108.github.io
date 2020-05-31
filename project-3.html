@@ -46,7 +46,7 @@
 				<hr>
 				<h2>  2.1 Proposed Model</h2>
 				<hr>
-				<h4>2.1.1.Building of Denoising Auto-Encoder</h4>
+				<h4>2.1.1 Building of Denoising Auto-Encoder</h4>
 					The proposed Scalable CBIR (S-CBIR) system consists of three processes namely, feature extraction, bucketi-
 					zation of features and finding similar images as shown Figure 2. First, S-CBIR builds the denoising autoencoder
 
@@ -69,7 +69,7 @@
 				</center>
 				<hr>
 					<p>
-					<h4>2.1.1.2Feature Extraction</h4>
+					<h4>2.1.1.1 Feature Extraction</h4>
 					The S-CBIR system chooses to utilize deep learning architecture to extract the features from the image as it outperforms the hand crafted feature extraction methods. Though Convolutional Neural Network (CNN) can
 					13 be used to extract the features from the image, it requires labeled data to train the neural network. However,S-CBIR utilizes big data. As labeling task is costly and time consuming for big data, unsupervised deep learning algorithm, namely, the auto encoder is utilized in this implementation to extract features. Basically, autoencoder encodes the input value x using a function f. Further, it decodes the encoded value f(x) using a function g to create output value identical to the input value. In this context, the objective of the autoencoder
 					is to minimize the reconstruction error between the input and the output. This helps autoencoders to learn
@@ -82,7 +82,7 @@
 			
 				<hr>
 
-				<h4>2.1.2.Locality Sensitive Hashing: Using Random projection method</h4>
+				<h4>2.1.2 Locality Sensitive Hashing: Using Random projection method</h4>
 					Random projection is a technique for representing high-dimensional data in low-dimensional feature space (dimensionality reduction). It gained traction for its ability to approximately preserve relations (pairwise distance or cosine similarity) in low-dimensional space while being computationally less expensive.
 					The core idea behind random projection is that if points in a vector space are of sufficiently high dimension, then they may be projected into a suitable lower-dimensional space in a way which approximately preserves the distances between the points.
 					Consider a high-dimensional data represented as a matrix D, with n observations (columns of matrix) and d features (rows of the matrix). It can be projected onto a lower dimensional space with k dimensions using a random projection matrix R. Mathematically, the lower dimensional representation P can be obtained as:<br>
