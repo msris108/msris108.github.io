@@ -69,8 +69,9 @@ body {
 /* Portfolio styles */
 
 .portfolio-items-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+  display: grid;    
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  grid-template-rows: repeat(2, 500px);  
 }
 
 .portfolio-item-wrapper {
