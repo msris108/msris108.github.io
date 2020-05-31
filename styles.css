@@ -123,12 +123,26 @@ body {
 
 /* about me section */
 .two-column-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: grid;    
+  	grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+  	grid-template-rows: repeat(1, 500px);  
+}
+
+.single-column-wrapper {
+	position: relative;
 }
 
 .profile-image-wrapper img{
-	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+	width: relative;
+}
+
+.profile-content-wrapper {
+	height: 500px;
+	width: relative;
 }
 
 .scrolling-effect ul{
@@ -136,7 +150,7 @@ body {
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-	width: 1500px;
+	width: relative;
 	overflow-x: auto;
 }
 
