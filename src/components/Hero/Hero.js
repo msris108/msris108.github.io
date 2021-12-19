@@ -14,7 +14,7 @@ const Hero = (props) => (
       <SectionText>
         Computer Science Engineer. <br />
       </SectionText>  
-      <Button onClick={() => window.location = 'img/Sriram_M_Resume.pdf'}> View Resume </Button>
+      <Button onClick={() => window.location = 'images/Sriram_M_Resume.pdf'}> View Resume </Button>
     </LeftSection>
   </Section>
 );
