@@ -14,9 +14,11 @@ export const Boxes = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    gap: 10px;
-    margin: 20px 0 32px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    max-width: 500px;
+    margin: 24px auto;
   }
 `
 
@@ -60,7 +62,7 @@ export const BoxNum = styled.h5`
     line-height: 32px;
   }
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 26px;
 }
 `

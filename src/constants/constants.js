@@ -12,7 +12,7 @@ export const projects = [
     title: 'Quick Chat Application',
     description:"A simple WebRTC chat app built using React, Express, Node and Socket.io. Deployed using netlify. Use this app if you ever want a secret chat room 👀. ",
     image: '/images/2.png',
-    tags: ['JavaScript', 'Networking', 'socket.io', 'WebRTC'],
+    tags: ['JSX', 'express', 'socket.io', 'WebRTC'],
     source: 'https://github.com/msris108/quick-chat-app',
     visit: 'https://quick-chat-appl.netlify.app/',
     id: 1,

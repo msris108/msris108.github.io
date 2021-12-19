@@ -8,8 +8,8 @@ const data = [
   { platform: 'Coursera', text: 'Blockchain Specialization', link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/YV849XCYVSYL', },
   { platform: 'Coursera', text: 'Tensorflow In Practice ', link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/AARAXAJCFLCF', },
   { platform: 'Coursera', text: 'Linear Algebra for Machine Learning', link: 'https://www.coursera.org/account/accomplishments/certificate/YNC958E4MD53', },
-  { platform: 'Coursera', text: 'Agile Design', link: 'https://www.coursera.org/account/accomplishments/certificate/Y3DWFWJZ8YZS', },
-  { platform: 'Coursera', text: 'Web App Development', link: 'https://www.coursera.org/account/accomplishments/certificate/V44F3DL46HJE', },
+  { platform: 'Coursera', text: 'Agile Design and Agile Thinking', link: 'https://www.coursera.org/account/accomplishments/certificate/Y3DWFWJZ8YZS', },
+  { platform: 'Coursera', text: 'Web App Dev. using PHP', link: 'https://www.coursera.org/account/accomplishments/certificate/V44F3DL46HJE', },
   { platform: 'NPTEL', text: 'Industrial IOT and Industry 4.0', link: '/', },
   { platform: 'NPTEL', text: 'Data Analytics with Python', link: '/'}
 ];
