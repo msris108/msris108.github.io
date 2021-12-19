@@ -14,11 +14,9 @@ export const Boxes = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    max-width: 500px;
-    margin: 24px auto;
+    margin: 20px 0 32px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 `
 

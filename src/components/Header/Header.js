@@ -40,20 +40,11 @@ const Header = () =>  (
       <SocialIcons href="https://github.com/msris108">
         <AiFillGithub size="3rem"/>
       </SocialIcons>
-      <SocialIcons href="https://instagram.com/msris108">
-        <AiFillInstagram size="3rem"/>
-      </SocialIcons>
       <SocialIcons href="https://www.linkedin.com/in/msris108/">
         <AiFillLinkedin size="3rem"/>
       </SocialIcons>
       <SocialIcons href="https://twitter.com/msris108">
         <AiFillTwitterSquare size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://www.facebook.com/msris108/">
-        <AiFillFacebook size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://msris108.medium.com/">
-        <AiFillMediumSquare size="3rem"/>
       </SocialIcons>
     </Div3>
   </Container>
