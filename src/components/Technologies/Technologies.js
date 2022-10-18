@@ -8,7 +8,9 @@ const Technologies = () =>  (
     <SectionDivider divider />
     <SectionTitle>About Me</SectionTitle>
     <SectionText>
-      I'm a Computer Science Undergrad. with research background in Artificial Intelligence and Software Development. Passionate about technology, finance, AI and Crypto. Always looking for opportunities to learn. 
+      ASDE-1 @ Publicis Sapient <br />
+      Ex Intern @ Zebpay  | Ex Research University of Cyprus <br />
+      I'm a Computer Science Undergrad. with research background in Artificial Intelligence and Software Development. Passionate about technology, finance, AI and Crypto. Always looking for opportunities to learn. Click here to see all my <a href="https://linktr.ee/msris108"> Links </a>
     </SectionText>
     <List>
       <ListItem>
@@ -18,8 +20,9 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Web Development</ListTitle>
           <ListParagraph>
-            Experiece with <br />
-            Flask, React.js, Node and Java Servlet Programming.
+            Worked on Microservices, Rest <br />
+            Backend: Java | Springboot, Golang, Python, node.js <br />
+            Frontend: React.js, Next.js <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -28,10 +31,10 @@ const Technologies = () =>  (
           <DiFirebase size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Databases and Big Data</ListTitle>
+          <ListTitle>Databases, Big Data and DevOps</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            MySQL, MongoDB, Oracle, Hadoop (HDFS), Apache Spark.
+            Databases: MySQL, MongoDB, Oracle, Hadoop (HDFS), Apache Spark, PostgresSQL, Apache Kafka. <br />
+            DevOps: AWS, Kubernetes, Docker, Jenkins
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -42,7 +45,7 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Artificial Intelligence</ListTitle>
           <ListParagraph>
-            Experience with <br />
+            Machine Learning, Deep Learning <br />
             Python, Conda, Tensorflow, Scikit-learn, OpenCV. 
           </ListParagraph>
         </ListContainer>

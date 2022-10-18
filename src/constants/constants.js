@@ -38,10 +38,10 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2016, text: 'Completed 10th grade with 10 CGPA', },
-  { year: 2018, text: 'Completed High School with 96%', },
+  { year: 2018, text: 'Completed Schooling. 12th Grade with 96%. 10th Grade with 10.0 CGPA. Joined BE Computer Science at SSNCE Chennai.', },
   { year: 2019, text: 'Research at SSN (ICBIR), Music Therapist for AMF, Adayar Cancer Institue, Chennai', },
   { year: 2021, text: 'Presented at Conference on Automation, Robotics, AI and Mechatronics (ARAM 2021)', },
   { year: 2021, text: 'Presented paper at International Conference on Computer, Communication and Signal Processing (ICCCSP 2021)', },
   { year: 2021, text: 'Research Intern at the University of Cyprus', },
+  { year: 2022, text: 'Research Intern at the Zebpay, ASDE-1 at Publicis Sapient', },
 ];
