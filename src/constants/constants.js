@@ -3,7 +3,7 @@ export const projects = [
     title: 'The Overengineering Project',
     description: "A blogging site, that aims to be a repository of projects built with the engineering best practices and infrastructure.",
       image: '/images/1.png',
-      tags: ['Astro.js', 'Next', 'Markdown'],
+      tags: ['Astro.js', 'Next.js', 'Algolia', 'Markdown'],
     source: 'https://github.com/msris108/msris108.github.io',
     visit: 'https://the-overengineering-project.vercel.app/',
     id: 0,
