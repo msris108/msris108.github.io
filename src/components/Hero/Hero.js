@@ -8,11 +8,10 @@ const Hero = (props) => (
   <Section>
     <LeftSection>
       <SectionTitle main center>
-        Hi I am <br />
-        Sriram Muralidharan
+        Hey There!<br></br> I am Sriram :) 
       </SectionTitle>
       <SectionText>
-        Computer Science Engineer. <br />
+        Software Development Engineer<br />
       </SectionText>  
       <Button onClick={() => window.location = 'https://drive.google.com/file/d/1HxVjYC4OrSEcooLWAtJYz4Utvq93HgDM/view?usp=sharing'}> 
         View Resume 

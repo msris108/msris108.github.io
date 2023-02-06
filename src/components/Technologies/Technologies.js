@@ -10,7 +10,7 @@ const Technologies = () =>  (
     <SectionText>
       ASDE-1 @ Publicis Sapient <br />
       Ex Intern @ Zebpay  | Ex Research University of Cyprus <br />
-      I'm a Computer Science Undergrad. with research background in Artificial Intelligence and Software Development. Passionate about technology, finance, AI and Crypto. Always looking for opportunities to learn. Click here to see all my <a href="https://linktr.ee/msris108"> Links </a>
+      I'm a Computer Science Undergrad. I have research background in Artificial Intelligence and Software Development. Passionate about technology, finance, AI and Crypto. Always looking for opportunities to learn. Click here to see all my <a href="https://linktr.ee/msris108"> Links </a>
     </SectionText>
     <List>
       <ListItem>
@@ -21,7 +21,7 @@ const Technologies = () =>  (
           <ListTitle>Web Development</ListTitle>
           <ListParagraph>
             Worked on Microservices, Rest <br />
-            Backend: Java | Springboot, Golang, Python, node.js <br />
+            Backend: Java | Springboot, Golang, Python, Django-RestFramework, Javascript, Express.j, Node.js, Typescript-TypeORM, Nx<br />
             Frontend: React.js, Next.js <br />
           </ListParagraph>
         </ListContainer>
@@ -33,7 +33,7 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Databases, Big Data and DevOps</ListTitle>
           <ListParagraph>
-            Databases: MySQL, MongoDB, Oracle, Hadoop (HDFS), Apache Spark, PostgresSQL, Apache Kafka. <br />
+            Databases: MySQL, MongoDB, Hadoop (HDFS), Apache Spark, PostgresSQL, Apache Kafka. <br />
             DevOps: AWS, Kubernetes, Docker, Jenkins
           </ListParagraph>
         </ListContainer>

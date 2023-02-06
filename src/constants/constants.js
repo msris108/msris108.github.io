@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: 'Exam Reg. System',
-    description: "An Exam Registration system built Using Node.js, Express & MongoDB a Full Stack  Application. This was built as a part of a course mini project. ",
+    title: 'The Overengineering Project',
+    description: "A blogging site, that aims to be a repository of projects built with the engineering best practices and infrastructure.",
       image: '/images/1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
-    source: 'https://github.com/sruthibijoyr/Exam-Registration-System',
-    visit: 'https://exam-registration-system.herokuapp.com/',
+      tags: ['Astro.js', 'Next', 'Markdown'],
+    source: 'https://github.com/msris108/msris108.github.io',
+    visit: 'https://the-overengineering-project.vercel.app/',
     id: 0,
   },
   {
