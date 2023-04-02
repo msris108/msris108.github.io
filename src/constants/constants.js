@@ -9,12 +9,12 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Quick Chat Application',
-    description:"A simple WebRTC chat app built using React, Express, Node and Socket.io. Deployed using netlify. Use this app if you ever want a secret chat room 👀. ",
+    title: 'Explain AI',
+    description:"A website with a set of quick tools that aims to make mundane tasks easier. Currently explains complex techinical terms, helps you construct a professional LinkedIn post and summarizes movie plots. Built with ChatGPT, Django, Django Rest Framework",
     image: '/images/2.png',
-    tags: ['JSX', 'express', 'socket.io', 'WebRTC'],
-    source: 'https://github.com/msris108/quick-chat-app',
-    visit: 'https://quick-chat-appl.netlify.app/',
+    tags: ['ChatGPT', 'Django', 'Django RestFramework', 'Vercel'],
+    source: 'https://github.com/msris108/explain-ai',
+    visit: 'https://explain-ai-msris108.vercel.app/',
     id: 1,
   },
   {
